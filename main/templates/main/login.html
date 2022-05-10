@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Submit</button>
+    </form>
+    <p>Не зарегистрированы на нашем сайте?</p>
+    <a href="{% url 'main:register' %}">Вот вам ссылка для регистрации!</a>
+
+{% endblock %}
